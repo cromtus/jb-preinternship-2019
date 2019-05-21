@@ -186,7 +186,7 @@ function Interpreter(source_code, output) {
       return new Instruction('print', {variable: tokens[1]})
     default:
       return new Instruction('invalid', {
-        why: 'Unknown command'
+        why: 'Unknown command ' + tokens[0]
       })
     }
   }
