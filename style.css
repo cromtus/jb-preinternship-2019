@@ -1,0 +1,138 @@
+* {
+	margin: 0;
+	padding: 0;
+	font: inherit;
+	box-sizing: border-box;
+	outline: none;
+	line-height: 1.3em;
+}
+html, body {
+	font-size: 12px;
+	font-family: 'Open Sans', sans-serif
+}
+#container {
+	margin: 0 auto;
+	width: 800px;
+}
+.heading {
+	font-size: 30px;
+	margin: 30px 0 15px;
+}
+.code {
+	white-space: pre-wrap;
+	width: 100%;
+	max-width: 300px;
+	padding: 10px;
+}
+#input {
+	border: 1px solid #ccc;
+	height: 300px;
+}
+.control {
+	margin-top: 15px;
+}
+.monospace {
+	font-family: 'Ubuntu Mono', monospace;
+}
+button {
+	padding: 7px;
+	border: 1px solid #ccc;
+	border-radius: 10px;
+	background: #eee;
+	color: #000;
+	cursor: pointer;
+	margin: 0 10px 10px 0;
+}
+button:hover {
+	background: #fff;
+}
+button:active {
+	background: #ddd;
+}
+button[disabled], button[disabled]:active, button[disabled]:hover {
+	border: 1px solid #eee;
+	background: #f5f5f5;
+	color: #555;
+	cursor: default;
+}
+a, a:visited {
+	color: #55f;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+a:active {
+	opacity: 0.7;
+}
+#editor {
+	float: left;
+	width: 300px;
+}
+#debugger {
+	float: left;
+	width: 300px;
+	display: none;
+}
+.line {
+	padding: 0 5px;
+	border-left: 2px solid #fff;
+}
+.line .number {
+	margin: 0 10px 0 -48px;
+	padding-right: 5px;
+	opacity: 0.5;
+}
+.line.highlighted {
+	background: #efe;
+	border-left: 2px solid #5c5;
+}
+.line.highdarked {
+	background: #eee;
+	border-left: 2px solid #eee;
+	border-right: 2px solid #aaa;
+}
+#output {
+	background: #f5f5f5;
+	padding: 5px;
+	width: 500px;
+	float: left;
+	min-height: 200px;
+}
+.message {
+	margin: 5px;
+	float: left;
+	width: 480px;
+}
+.message.error {
+	background: #fee;
+	border-left: 2px solid #caa;
+}
+.message.output {
+	background: #eef;
+	border-left: 2px solid #aaf;
+}
+.message.info {
+	background: #eee;
+	border-left: 2px solid #aaa;	
+}
+.message .text {
+	margin: 5px;
+}
+.message .close {
+	color: #aaa;
+	float: right;
+	padding: 5px;
+	cursor: pointer;
+}
+.message .close:hover {
+	color: #000;
+}
+#output .placeholder {
+	font-size: 11px;
+	color: #aaa;
+	margin-bottom: 15px;
+}
+a.test {
+	white-space: nowrap;
+}

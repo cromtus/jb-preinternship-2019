@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+<title>Guu interpreter</title>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans|Ubuntu+Mono&display=swap" rel="stylesheet">
+<link href="style.css" rel="stylesheet">
+<script src='guu.js'></script>
+</head>
+<body>
+<div id='container'>
+	<div class='heading'>Это интерпретатор <b>Guu</b></div>
+	<div id='editor'>
+		<textarea id='input' class='monospace code' placeholder='Введите сюда свой код. Или выберите из тестов'></textarea>
+		<div class='control'>
+			<button type='submit' onclick='start()'>Запустить отладчик</button><br>
+			<a href='#' onclick='return test(0)' class='test'>Тест от JB</a> &bullet;
+			<a href='#' onclick='return test(1)' class='test'>Бесконечная рекурсия</a> &bullet;
+			<a href='#' onclick='return test(2)' class='test'>Конечная рекурсия</a> &bullet;
+			<a href='#' onclick='return test(3)' class='test'>Пустые тела функций</a> &bullet;
+			<a href='#' onclick='return test(4)' class='test'>Корректный код</a> &bullet;
+			<a href='#' onclick='return test(5)' class='test'>Некорректный код</a>
+		</div>
+	</div>
+	<div id='debugger'>
+		<div class='monospace code' id='lines'></div>
+		<div class='control'>
+			<button type='submit' onclick='step()' class='disablable'>Шаг с заходом</button><button type='submit' onclick='stepOver()' class='disablable'>Шаг с обходом</button><button type='submit' onclick='displayStackTrace()'>Stack Trace</button><button type='submit' onclick='displayVariables()'>Показать переменные</button>
+			<br>
+			<br>
+			<button type='submit' onclick='clearOutput()'>Очистить вывод</button>
+			<button type='submit' onclick='reset()'>Сбросить всё и отредактировать код</button>
+		</div>
+	</div>
+	<div id='output'><span class='placeholder'>Вывод</span></div>
+</div>
+<script src='interface.js'></script>
+</body>
+</html>
